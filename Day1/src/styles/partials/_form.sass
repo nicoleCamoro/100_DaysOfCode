@@ -1,0 +1,35 @@
+
+.overlap
+  background-color: $grey
+  height: 74%
+  color: $text-color2
+  text-align: center
+  padding: 50px 30px 50px 30px
+  box-shadow: 10px 5px 200px $grey
+
+
+  .glyphicon-tint
+    font-size: 30px
+
+  .heading
+    margin: 0
+    font-family: $font-heading
+
+  form
+    margin-top: 50px
+
+  .btn-form
+    width: 50%
+    transition: 0.7s
+    font-family: $font-heading
+
+  button
+    +button($text-color2, $text-color1)
+    @extend .btn-form
+
+    &:hover
+      +button($text-color1, $text-color2)
+      @extend .btn-form
+
+.fadeIn
+  animation-duration: 2s

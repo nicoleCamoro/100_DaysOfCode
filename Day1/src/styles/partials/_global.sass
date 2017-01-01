@@ -1,0 +1,28 @@
+body
+  font-family: $font-stack
+
+
+.main
+  height: 100vh
+  width: 100vw
+  background-color: $main-background
+  background: linear-gradient(to right top, $main-background 0%, darken($main-background, 15%) 29%, darken($main-background, 35%) 100%)
+  padding: 0 100px 0 100px
+  //flexbox parent
+  display: flex
+  align-items: center
+  justify-content: center
+
+  .content-container-l
+    width: 80%
+    height: 60%
+    background-color: $blur
+    border-radius: 10px 0 0 10px
+    box-shadow: 10px 5px 200px $grey
+
+  .content-container-r
+    width: 8%
+    height: 60%
+    background-color: $blur
+    border-radius: 0 10px 10px 0
+    box-shadow: 10px 5px 200px $grey

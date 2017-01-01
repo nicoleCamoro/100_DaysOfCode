@@ -1,7 +1,6 @@
 var gulp = require('gulp');
 var plumber = require('gulp-plumber');
 var rename = require('gulp-rename');
-var sourcemaps = require('gulp-sourcemaps');
 var sass = require('gulp-sass');
 var autoPrefixer = require('gulp-autoprefixer');
 var cleanCss = require('gulp-clean-css');
@@ -27,7 +26,6 @@ gulp.task('sass',function(){
                 this.emit('end');
             }
         }))
-        .pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(autoPrefixer())
         .pipe(gulp.dest('public/css/'))
@@ -35,7 +33,6 @@ gulp.task('sass',function(){
             suffix: '.min'
         }))
         .pipe(cleanCss())
-        .pipe(sourcemaps.write())
         .pipe(gulp.dest('public/css/'))
 });
 
